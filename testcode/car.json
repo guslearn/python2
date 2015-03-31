@@ -1,0 +1,14 @@
+{
+  "mycars": {
+    "features": {
+      "automacit_windows": true, 
+      "cruise_control": false, 
+      "cup_hoders": 2
+    }, 
+    "transmission": "automatic", 
+    "make": "Mitsubishi", 
+    "color": "red", 
+    "doors": 4, 
+    "model": "Lancer"
+  }
+}

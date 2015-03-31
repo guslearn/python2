@@ -1,0 +1,10 @@
+{
+  "features": {
+    "stowaway_seats": true
+  }, 
+  "transmission": "automatic", 
+  "make": "Ford", 
+  "color": "blue", 
+  "doors": 6, 
+  "model": "Explorer"
+}
