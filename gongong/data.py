@@ -1,0 +1,6 @@
+CT108_LOGIN_URL = "http://admin.ct108.org:2046/syslogin.aspx"
+CT108_USERNAME = "gbj"
+CT108_PASSWORD = "123"
+CT108_YANZHENGMA = "1"
+CT108_ALLITEMS = ".m-nav .all_column .all"
+CT108_ADS = ".m-nav .all_column .detail .il a"
