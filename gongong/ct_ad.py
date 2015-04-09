@@ -14,8 +14,9 @@ class Enter:
 
     def enterAd(self):
         items = self.findAllItems();
-        ads = items.find_by_css(data.CT108_ADS)
-        print ads.text
+        ads = items.find_by_css(".m-nav .all_column .detail .il a")
+        ad = ads.find_by_css(data.CT108_ADS)
+        print len(ad)
         #for ad_text in (ads.text):
             #if ad_text == u"畅唐广告":
              #   ad_text.click()
