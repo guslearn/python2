@@ -6,8 +6,6 @@ import ct_ad
 browser = splinter.Browser()
 #login.CT108LoginPage(browser).login_in()
 #print "sucessed"
-ct_ad.Enter(browser).enterAd()
+ct_ad.Enter(browser).enter_ad()
 print "ok"
-#allItems = browser.find_by_css(".m-nav .nav_second ul li")
-#print allItems
 
