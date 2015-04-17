@@ -14,6 +14,17 @@ class Enter:
        return all_items
     
     def find_ad(self):
+        items = self.find_all_items();
+        items.mouse_over()
+        print "items text : " + items.text
+        t0 = self.browser.find_by_css(".m-nav .all_column .detail .wu")#所有内容
+        t = t0.find_by_css(".m-nav .all_column .detail .il")
+        tt = t.find_by_css(".m-nav .all_column .detail .tp")
+        print "tt text : " + tt.text
+        for ttt in tt:
+            if ttt.text == u"广告":
+                print "ttt text : " + ttt.text
+                ttt.click()
         ads = self.browser.find_link_by_href("http://tcmm.admin.ct108.org:802/Default.aspx")
         ads.click()
        # gg = self.browser.find_by_css(".m-nav .all_column .detail .il a")
@@ -22,10 +33,9 @@ class Enter:
         #return ads
 
     def enter_ad(self):
-        items = self.find_all_items();
-        items.mouse_over()
-        print "items text : " + items.text
-       # ad = items.find_link_by_href("http://tcmm.admin.ct108.org:802/Default.aspx")
+        #items = self.find_all_items();
+        #items.mouse_over()
+        #print "items text : " + items.text
         #ad = items.find_by_css(data.CT108_ADS)
         self.find_ad()
         #print "the length of ad is : " + str(len(ad))
