@@ -17,14 +17,15 @@ class Enter:
         items = self.find_all_items();
         items.mouse_over()
         print "items text : " + items.text
-        t0 = self.browser.find_by_css(".m-nav .all_column .detail .wu")#所有内容
-        t = t0.find_by_css(".m-nav .all_column .detail .il")
-        tt = t.find_by_css(".m-nav .all_column .detail .tp")
-        print "tt text : " + tt.text
-        for ttt in tt:
-            if ttt.text == u"广告":
-                print "ttt text : " + ttt.text
-                ttt.click()
+        #t0 = self.browser.find_by_css(".m-nav .all_column .detail .wu")#所有内容
+        t0 = self.browser.find_by_css(".m-nav .all_column .detail .zm")
+        t = t0.find_by_css(".m-nav .all_column .detail .il a").first
+        #tt = t.find_by_css(".m-nav .all_column .detail .il .nav_second")
+        print "tt text : " + t0.text
+        #for ttt in tt:
+         #   if ttt.text == u"广告":
+          #      print "ttt text : " + ttt.text
+           #     ttt.click()
         ads = self.browser.find_link_by_href("http://tcmm.admin.ct108.org:802/Default.aspx")
         ads.click()
        # gg = self.browser.find_by_css(".m-nav .all_column .detail .il a")

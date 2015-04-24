@@ -8,4 +8,5 @@ browser = splinter.Browser()
 #print "sucessed"
 ct_ad.Enter(browser).enter_ad()
 print "ok"
+browser.quit()
 
