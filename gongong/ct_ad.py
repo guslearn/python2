@@ -18,19 +18,29 @@ class Enter:
         items.mouse_over()
         print "items text : " + items.text
         #t0 = self.browser.find_by_css(".m-nav .all_column .detail .wu")#所有内容
-        t0 = self.browser.find_by_css(".m-nav .all_column .detail .zm")
-        t = t0.find_by_css(".m-nav .all_column .detail .il a").first
+        t01 = self.browser.find_by_css(".m-nav .all_column .detail .wu")
+        t0 = t01.find_by_css(".m-nav .all_column .detail .zm")
+#        t = t0.find_by_css(".m-nav .all_column .detail .il a").first
         #tt = t.find_by_css(".m-nav .all_column .detail .il .nav_second")
         print "tt text : " + t0.text
+        print "---------------------------------------"
+        print "tt : " + str(t0)
+        for t00 in t0:
+            if t00.text == "G":
+                print "find G!"
+                break
+            else:
+                print "Not find!"
+            break
         #for ttt in tt:
          #   if ttt.text == u"广告":
           #      print "ttt text : " + ttt.text
            #     ttt.click()
-        ads = self.browser.find_link_by_href("http://tcmm.admin.ct108.org:802/Default.aspx")
-        ads.click()
+#        ads = self.browser.find_link_by_href("http://tcmm.admin.ct108.org:802/Default.aspx")
+#        ads.click()
        # gg = self.browser.find_by_css(".m-nav .all_column .detail .il a")
-        gg = self.browser.find_by_css("v .nav_second ul liv .nav_second ul li")
-        print "gg text : " + str(gg) 
+#        gg = self.browser.find_by_css("v .nav_second ul liv .nav_second ul li")
+#        print "gg text : " + str(gg) 
         #return ads
 
     def enter_ad(self):
