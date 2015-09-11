@@ -1,5 +1,5 @@
 CT108_LOGIN_URL = "http://fms2.ct108.org:1505"
-CT108_USERNAME = "gbj"
+CT108_USERNAME = "cmstest1and1"
 CT108_PASSWORD = "123"
 CT108_YANZHENGMA = "1"
 CT108_ALLITEMS = ".m-nav .all_column .all"

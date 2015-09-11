@@ -6,7 +6,7 @@ import ct_ad
 browser = splinter.Browser()
 #login.CT108LoginPage(browser).login_in()
 #print "sucessed"
-ct_ad.Enter(browser).enter_ad()
+ct_ad.Enter(browser).enterReimburse()
 print "ok"
 browser.quit()
 
