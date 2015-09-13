@@ -1,38 +1,19 @@
-class Test(object):
-  def __init__(self,num):
-    self.num=num
+#encoding=utf-8
+import time
+import splinter
 
-  def __eq__(self,other):
-    if self.num == other.num:
-        return True
-    else:
-        return False
+#进入新浪新闻
+browser = splinter.Browser()
+#url = "http://www.sina.com.cn/"
+#browser.visit(url)
+#browser.click_link_by_href("http://news.sina.com.cn/")
 
-  def __ne__(self,other):
-    if self.num != other.num:
-        return True
-    else:
-        return False
-
-  def __gte__(self,other):
-    print self.num
-    print other.num
-    if self.num >= other.num:
-        return True
-    else:
-        return False
-
-def main():
-  a=Test(5)
-  b=Test(5)
-  c=Test(7)
-  #print (a==b)
-  #print (a==c)
-  #print (a!=b)
-  #print (a!=c)
-  print (a>b)
-  #print (a>=c)
-  #print (c>=a)
-
-if __name__ == "__main__":
-    main()
+browser.visit("http://user.uc108.com/register.html")
+#最头行
+a = browser.document.getElementById("username")
+print "a text is : "+ a.text
+#if (a.len()>0)
+#    print "yes"
+#else
+#    print "no"
+browser.quit()
