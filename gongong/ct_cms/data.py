@@ -1,4 +1,5 @@
-CT108_LOGIN_URL = "http://fms2.ct108.org:1505"
+#CT108_LOGIN_URL = "http://fms2.ct108.org:1505"
+CT108_LOGIN_URL = "http://fms.ct108.org:1403/Index.aspx"
 CT108_USERNAME = "cmstest1and1"
 CT108_PASSWORD = "123"
 CT108_YANZHENGMA = "1"

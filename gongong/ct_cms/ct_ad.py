@@ -1,5 +1,4 @@
 #encoding=utf-8
-import splinter
 import login
 import data
 from selenium import webdriver
@@ -12,5 +11,6 @@ class Enter:
 
     def enterReimburse(self):
         #self.browser.find_element_by_css_selector[css=a:contains("我要借款")].click()
-        self.browser.find_element_by_link_text("我要借款").click()
+        #self.browser.find_element_by_css_selector("div#header>ul.top-nav>li>a.top-item top-item_1")
+        self.browser.find_element_by_css_selector("div#index-page-outer")
         time.sleep(5)
