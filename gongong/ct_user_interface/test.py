@@ -1,6 +1,6 @@
 #encoding=utf-8
 import splinter
-import lbs_search_near
+import register
 import time
 import json
 import urllib2
@@ -11,4 +11,5 @@ import urllib2
 #print "ok"
 #browser.quit()
 if __name__ == "__main__":
-    exefile("lvs_search_near.py")
+    #exefile("lvs_search_near.py")
+    register.Register().register_one()
