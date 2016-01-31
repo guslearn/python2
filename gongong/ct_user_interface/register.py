@@ -7,9 +7,9 @@ import data
 url_register = data.url_register
 
 class Register:
-    #username = ""
-    #password = ""
-    #url_register = data.url_register
+    _userid = 0;
+    _uname = ""
+    _pwd = ""
 
     #一键注册，要以整个json格式请求
     def one_key(self):
@@ -19,9 +19,11 @@ class Register:
         response = urllib2.urlopen(req)
         response_read = response.read()
         res = json.loads(response_read)
-        uname = res["Data"]["UserName"]
-        pwd = res["Data"]["Password"]
-        return uname,pwd
+        self._uname = res["Data"]["UserName"]
+        self._pwd = res["Data"]["Password"]
+        self._userid = res["Data"]["UserID"]
+        #return _uname,_pwd,_userid
+
     
     #手机号注册
     def mobile(self):
