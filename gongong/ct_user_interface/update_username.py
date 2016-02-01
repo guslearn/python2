@@ -10,16 +10,22 @@ import login
 url_update_username = data.url_update_username
 cookie = cookielib.CookieJar()
 login1 = login.Login()
-cookie,oldxxxxxxxxxxx = login1.login_by_username()
+cookie = login1._cookie
+oldname = login1._username
+userid = login1._userid
 
 handler = urllib2.HTTPCookieProcessor(cookie)
 opener = urllib2.build_opener(handler)
 
-value1 = {"MobileHardInfo":{"WifiID":"745c39fa0900","SystemID":"34b4206771049e7","ImeiID":"162517026242370","ImsiID":"","SimSerialNO":""}}
+value1 = {"UserID":userid,"OldUserName":oldname,"NewUserName":"utesdadfsa1"}
 data1 = json.dumps(value1)
-req1 = urllib2.Request(url_current_user,data1, {'Content-Type': 'application/json'})
+req1 = urllib2.Request(url_update_username,data1, {'Content-Type': 'application/json'})
+print 1
+print type(req1)
 #response1 = urllib2.urlopen(req1)
 response1 = opener.open(req1)
+print 2
+print type(response1)
 response_read1 = response1.read()
 res1 = json.loads(response_read1)
 if res1["StatusCode"] == 0:
