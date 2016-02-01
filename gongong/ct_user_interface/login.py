@@ -19,8 +19,8 @@ class Login:
     _username = username
     _userid = userid
     _cookie = ""
-    #用户名密码登录
-    def login_by_username(self):
+    #默认为用户名密码登录
+    def __init__(self):
         __cookie = cookielib.CookieJar()
         value1 = {"UserName":self._username,"Password":password,"AppId":66,"RecommenderID":11,"MobileHardInfo":{"WifiID":"745c39fa0900","SystemID":"34b4206771049e7","ImeiID":"162517026242370","ImsiID":"","SimSerialNO":""},"DownloadGroup":6,"StatExtInfo":{"FromAppId":66},"CodeID":"A5E31C95EE4F409CB75D4C8262420454","VerifyCode":"7ab1","Version ":"20150821"}
 
@@ -49,7 +49,7 @@ class Login:
             #print item.version
 
         res = json.loads(response_read)
-        print res["StatusCode"]
+        #print res["StatusCode"]
         #print cookie
         if res["StatusCode"] == 0:
             #return __cookie
