@@ -4,6 +4,10 @@ url_register = "http://sdk.ct108.org:1910/Register/Register"
 url_login = "http://sdk.ct108.org:1910/login/authorize"
 url_current_user = "http://sdk.ct108.org:1910/User/CurrentUser"
 url_update_username = "http://sdk.ct108.org:1910/User/UpdateUserName"
+url_update_password = "http://sdk.ct108.org:1910/User/UpdatePassword"
+
+#手机设备信息
+Mobile_Hard_Info = {"WifiID":"745c39fa0900","SystemID":"34b4206771049e7","ImeiID":"162517026242370","ImsiID":"","SimSerialNO":""}
 
 #用户类型 0-普通用户，1-会员，256-手机端注册用户  ---用户类型怎么判断？
 UserType = {"normal":0,"member":1,"mobile":256}

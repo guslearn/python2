@@ -10,10 +10,14 @@ class Register:
     _userid = 0;
     _uname = ""
     _pwd = ""
+    _hardinfo = data.Mobile_Hard_Info
+
+    def __init__(self):
+        self.one_key()
 
     #一键注册，要以整个json格式请求
     def one_key(self):
-        value = {"UserType":data.UserType["normal"],"RegFrom":31,"OSName":6,"RecommenderID":11,"MobileHardInfo":{"WifiID":"745c39fa0900","SystemID":"34b4206771049e7","ImeiID":"162517026242370","ImsiID":"","SimSerialNO":""},"sex":0,"RegIP":"192.168.0.1","DownloadGroup":6}
+        value = {"UserType":data.UserType["normal"],"RegFrom":31,"OSName":6,"RecommenderID":11,"MobileHardInfo":self._hardinfo,"sex":0,"RegIP":"192.168.0.1","DownloadGroup":6}
         datas = json.dumps(value)
         req = urllib2.Request(url_register,datas, {'Content-Type': 'application/json'})
         response = urllib2.urlopen(req)

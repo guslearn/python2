@@ -11,21 +11,26 @@ url_login = data.url_login
 #cookie = cookielib.CookieJar()
 
 reg1 = register.Register()
-reg1.one_key()
+#reg1.one_key()
 username,password,userid = reg1._uname,reg1._pwd,reg1._userid
+mobilehard = data.Mobile_Hard_Info
 #print username
 
 class Login:
     _username = username
     _userid = userid
+    _userpwd = password
     _cookie = ""
-    #默认为用户名密码登录
+    _hardinfo = mobilehard
+    #默认为同设备用户名密码登录
     def __init__(self):
-        self.login_by_username()
+        self.login_by_username_same_hard()
 
-    def login_by_username(self):
+
+    #同设备用户名密码登录
+    def login_by_username_same_hard(self):
         __cookie = cookielib.CookieJar()
-        value1 = {"UserName":self._username,"Password":password,"AppId":66,"RecommenderID":11,"MobileHardInfo":{"WifiID":"745c39fa0900","SystemID":"34b4206771049e7","ImeiID":"162517026242370","ImsiID":"","SimSerialNO":""},"DownloadGroup":6,"StatExtInfo":{"FromAppId":66},"CodeID":"A5E31C95EE4F409CB75D4C8262420454","VerifyCode":"7ab1","Version ":"20150821"}
+        value1 = {"UserName":self._username,"Password":password,"AppId":66,"RecommenderID":11,"MobileHardInfo":self._hardinfo,"DownloadGroup":6,"StatExtInfo":{"FromAppId":66},"CodeID":"A5E31C95EE4F409CB75D4C8262420454","VerifyCode":"7ab1","Version ":"20150821"}
 
         handler = urllib2.HTTPCookieProcessor(__cookie)
         opener = urllib2.build_opener(handler)
@@ -60,5 +65,22 @@ class Login:
         else:
             print "Not Sucessed!"
 
+    #用户名密码登录
+    def login_by_username(self):
+        __cookie = cookielib.CookieJar()
+        value1 = {"UserName":self._username,"Password":password,"AppId":66,"RecommenderID":11,"MobileHardInfo":{"WifiID":"745c39fa0901","SystemID":"34b4206771049e8","ImeiID":"162517026242371","ImsiID":"","SimSerialNO":""},"DownloadGroup":6,"StatExtInfo":{"FromAppId":66},"CodeID":"A5E31C95EE4F409CB75D4C8262420454","VerifyCode":"7ab1","Version ":"20150821"}
 
+        handler = urllib2.HTTPCookieProcessor(__cookie)
+        opener = urllib2.build_opener(handler)
+        datas = json.dumps(value1)
+        req = urllib2.Request(url_login,datas, {'Content-Type': 'application/json'})
+
+        response = opener.open(req)
+        response_read = response.read()
+        res = json.loads(response_read)
+        if res["StatusCode"] == 0:
+            #return __cookie
+            self._cookie = __cookie
+        else:
+            print "Not Sucessed!"
 
