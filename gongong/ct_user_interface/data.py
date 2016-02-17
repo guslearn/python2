@@ -6,6 +6,7 @@ url_current_user = "http://sdk.ct108.org:1910/User/CurrentUser"
 url_update_username = "http://sdk.ct108.org:1910/User/UpdateUserName"
 url_update_password = "http://sdk.ct108.org:1910/User/UpdatePassword"
 url_check_username_exist = "http://sdk.ct108.org:1910/Register/CheckUserNameExist"
+url_check_username_is_valid = "http://sdk.ct108.org:1910/Register/CheckUserNameIsVaild"
 
 #手机设备信息
 Mobile_Hard_Info = {"WifiID":"745c39fa0900","SystemID":"34b4206771049e7","ImeiID":"162517026242370","ImsiID":"","SimSerialNO":""}
