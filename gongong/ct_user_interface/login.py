@@ -12,6 +12,7 @@ url_login = data.url_login
 
 reg1 = register.Register()
 #reg1.one_key()
+reg1.mobile()
 username,password,userid = reg1._uname,reg1._pwd,reg1._userid
 mobilehard = data.Mobile_Hard_Info
 #print username
@@ -62,6 +63,8 @@ class Login:
         if res["StatusCode"] == 0:
             #return __cookie
             self._cookie = __cookie
+            print self._username
+            print self._userpwd
         else:
             print "Not Sucessed!"
 
