@@ -93,11 +93,11 @@ class Login:
         else:
             print "Not Sucessed!"
 
-
+    #手机号密码登录
     def login_by_mobile_and_pwd(self):
         __cookie = cookielib.CookieJar()
         self._mobile = reg1._mobile
-        value1 = {"Mobile":self._username,"Password":password,"AppId":66}
+        value1 = {"Mobile":self._mobile,"Password":password,"AppId":66}
 
         handler = urllib2.HTTPCookieProcessor(__cookie)
         opener = urllib2.build_opener(handler)
@@ -121,13 +121,14 @@ class Login:
         else:
             print "Not Sucessed!"
     
+
+    #短信验证码登录
     def login_by_mobile_and_smscode(self):
         __cookie = cookielib.CookieJar()
         self._mobile = reg1._mobile
         regcode1 = send_register_code.Regcode()
         mobile = regcode1._mobile
         smscode = regcode1._smscode
-
 
         value1 = {"Mobile":self._mobile,"SmsCode":smscode,"AppId":66,"RecommenderID":11,"MobileHardInfo":{"WifiID":"745c39fa0901","SystemID":"34b4206771049e8","ImeiID":"162517026242371","ImsiID":"","SimSerialNO":""},"DownloadGroup":6,"StatExtInfo":{"FromAppId":66},"CodeID":"A5E31C95EE4F409CB75D4C8262420454","VerifyCode":"7ab1","Version ":"20150821"}
 
