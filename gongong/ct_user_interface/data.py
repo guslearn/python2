@@ -6,11 +6,13 @@ url_login = "http://sdk.ct108.org:1910/login/authorize"
 url_current_user = "http://sdk.ct108.org:1910/User/CurrentUser"
 url_update_username = "http://sdk.ct108.org:1910/User/UpdateUserName"
 url_update_password = "http://sdk.ct108.org:1910/User/UpdatePassword"
+url_update_username_and_password = "http://sdk.ct108.org:1910/User/UpdateUserNameAndPassword"
 url_check_username_exist = "http://sdk.ct108.org:1910/Register/CheckUserNameExist"
 url_check_username_is_valid = "http://sdk.ct108.org:1910/Register/CheckUserNameIsVaild"
 url_check_mobile_exist = "http://sdk.ct108.org:1910/Register/CheckMobileExist"
 url_send_register_code = "http://sdk.ct108.org:1910/Register/SendSmsCode"
 url_send_sms_code = "http://sdk.ct108.org:1910/User/SendSmsCode"
+url_check_user2 = "http://sdk.ct108.org:1910/User/CheckUser2"
 
 
 #手机设备信息

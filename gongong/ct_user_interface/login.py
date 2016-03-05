@@ -5,22 +5,24 @@ import json
 import cookielib
 import data
 import register
-import send_sms_code
+#import send_sms_code
 
 url_login = data.url_login
 #cookie = cookielib.CookieJar()
 
 reg1 = register.Register()
-#reg1.one_key()
-reg1.mobile()
+reg1.one_key()
+#reg1.mobile()
 username,password,userid = reg1._uname,reg1._pwd,reg1._userid
 mobilehard = data.Mobile_Hard_Info
 
+'''
 smscode1 = send_sms_code.SmsCode()
 smscode1._userid = userid
 smscode1._mobile = reg1._mobile
 smscode1._verify_code_type = 16
 smscode1._appid = 33
+'''
 
 class Login:
     _username = username

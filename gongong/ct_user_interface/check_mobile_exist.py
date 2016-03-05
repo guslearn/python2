@@ -5,15 +5,12 @@ import json
 import data
 
 url_check_mobile_exist = data.url_check_mobile_exist
-#url_check_mobile_exist = "http://sdk.uc108.net/Register/CheckMobileExist"
-file = open("file_of_mobile.txt")
+#file = open("file_of_mobile.txt")
 #lines = file.readlines()
 #    for line in lines:
 #        #line = line.strip() #   去除每次到空行
 #        if not line.startswith("#"):
 #           print line
-
-#mobile = "15158064574a"
 
 class MobileExist:
     _mobile = ""
@@ -41,7 +38,7 @@ class MobileExist:
         print "Mobile : " + self._mobile
 
         if res1["StatusCode"] == 0:
-            #print response_read1
+            print response_read1
             #print type(res1["Data"])  #bool
             if (res1["Data"]):
                 print "T"
